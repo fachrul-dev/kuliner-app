@@ -1,7 +1,7 @@
 <template>
   <nav class="navbar navbar-expand-lg navbar-light">
     <div class="container">
-      <a class="navbar-brand" href="#">Navbar</a>
+      <a class="navbar-brand" href="#">Kuliner</a>
       <button
         class="navbar-toggler"
         type="button"
@@ -54,7 +54,9 @@ export default {
   },
   mounted() {
     axios
-      .get("http://localhost:3000/keranjangs")
+      .get(
+        "https://my-json-server.typicode.com/fachrul-dev/json-kuliner/keranjangs"
+      )
       .then((response) => this.setJumlah(response.data))
       .catch((error) => console.log("error :", error));
   },
